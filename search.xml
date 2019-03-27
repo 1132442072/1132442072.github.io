@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello,World]]></title>
+    <url>%2F2019%2F03%2F28%2FHello-World%2F</url>
+    <content type="text"><![CDATA[搭建了自己的个人博客，记录学习历程以及生活，培养学习时留下记录的好习惯，也提升一下自己的文笔]]></content>
+      <categories>
+        <category>Hello,World</category>
+      </categories>
+      <tags>
+        <tag>Hello</tag>
+        <tag>World</tag>
+      </tags>
+  </entry>
+</search>
