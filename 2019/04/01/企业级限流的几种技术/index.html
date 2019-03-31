@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="限流,">
 
 
 
@@ -86,16 +86,20 @@
 
 
 
-<meta name="description" content="“记录学习，提升分享”">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://yoursite.com/categories/Hello-World/index.html">
+<meta name="description" content="限流的概念限流：限制流量，限流可以理解为服务降级的一种，限流就是限制系统的输入和输出流量已达到保护系统的目的，一般情况来说系统的吞吐量都是可以被测算的，为了保护系统的稳定运行，一旦达到的需要限制的阈值，就需要限制流量并采取一些措施以完成限制流量的目的 比如：延迟处理，拒绝处理，或者拒绝部分处理等等 企业级限流的几种技术1.手动实现负载均衡给用户提供选择，让用户访问主动访问不同的服务器达到负载均衡">
+<meta name="keywords" content="限流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="企业级限流的几种技术">
+<meta property="og:url" content="http://yoursite.com/2019/04/01/企业级限流的几种技术/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="“记录学习，提升分享”">
+<meta property="og:description" content="限流的概念限流：限制流量，限流可以理解为服务降级的一种，限流就是限制系统的输入和输出流量已达到保护系统的目的，一般情况来说系统的吞吐量都是可以被测算的，为了保护系统的稳定运行，一旦达到的需要限制的阈值，就需要限制流量并采取一些措施以完成限制流量的目的 比如：延迟处理，拒绝处理，或者拒绝部分处理等等 企业级限流的几种技术1.手动实现负载均衡给用户提供选择，让用户访问主动访问不同的服务器达到负载均衡">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/04/01/企业级限流的几种技术/NetFlixHystrix.png">
+<meta property="og:updated_time" content="2019-03-31T17:52:56.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
-<meta name="twitter:description" content="“记录学习，提升分享”">
+<meta name="twitter:title" content="企业级限流的几种技术">
+<meta name="twitter:description" content="限流的概念限流：限制流量，限流可以理解为服务降级的一种，限流就是限制系统的输入和输出流量已达到保护系统的目的，一般情况来说系统的吞吐量都是可以被测算的，为了保护系统的稳定运行，一旦达到的需要限制的阈值，就需要限制流量并采取一些措施以完成限制流量的目的 比如：延迟处理，拒绝处理，或者拒绝部分处理等等 企业级限流的几种技术1.手动实现负载均衡给用户提供选择，让用户访问主动访问不同的服务器达到负载均衡">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/01/企业级限流的几种技术/NetFlixHystrix.png">
 
 
 
@@ -125,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Hello-World/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/01/企业级限流的几种技术/">
 
 
 
 
 
-  <title>分类: Hello,World | 个人博客</title>
+  <title>企业级限流的几种技术 | 个人博客</title>
   
 
 
@@ -150,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -276,53 +280,193 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hello,World<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/企业级限流的几种技术/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DZX">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/28/Hello-World/" itemprop="url">
-              
-                <span itemprop="name">Hello,World</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">企业级限流的几种技术</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-28T03:08:34+08:00" content="2019-03-28">
-          03-28
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-01T01:39:53+08:00">
+                2019-04-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/限流/" itemprop="url" rel="index">
+                    <span itemprop="name">限流</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="限流的概念"><a href="#限流的概念" class="headerlink" title="限流的概念"></a>限流的概念</h2><p>限流：限制流量，限流可以理解为服务降级的一种，限流就是限制系统的输入和输出流量已达到保护系统的目的，一般情况来说系统的吞吐量都是可以被测算的，为了保护系统的稳定运行，一旦达到的需要限制的阈值，就需要限制流量并采取一些措施以完成限制流量的目的</p>
+<p>比如：延迟处理，拒绝处理，或者拒绝部分处理等等</p>
+<h2 id="企业级限流的几种技术"><a href="#企业级限流的几种技术" class="headerlink" title="企业级限流的几种技术"></a>企业级限流的几种技术</h2><h4 id="1-手动实现负载均衡"><a href="#1-手动实现负载均衡" class="headerlink" title="1.手动实现负载均衡"></a>1.手动实现负载均衡</h4><p>给用户提供选择，让用户访问主动访问不同的服务器达到负载均衡</p>
+<p>常见场景：下载软件（联通线路，电信线路，普通下载，高速下载）</p>
+<h4 id="2-验证码限流"><a href="#2-验证码限流" class="headerlink" title="2.验证码限流"></a>2.验证码限流</h4><p>强行减少用户访问的速度，达到一定程度的限流</p>
+<p>常见场景：如早期12306的验证码</p>
+<h4 id="3-容器限流"><a href="#3-容器限流" class="headerlink" title="3.容器限流"></a>3.容器限流</h4><p>常见的web容器也可以设置容器的配置来进行限流</p>
+<p>常见场景:以Tomcat为例</p>
+<p>acceptCount：如果Tomcat的线程都忙于相应，那么接下来新来的连接都会进入队列排队，如果超出排队大小则拒绝连接</p>
+<p>maxConnections：瞬时的最大连接数，超出的会进入队列进行等待</p>
+<p>maxThreads：Tomcat能用来处理请求的最大的线程数，如果请求的处理量一直高于此值，则容器可能会僵死</p>
+<a id="more"></a>
+<h4 id="4-限制总资源数"><a href="#4-限制总资源数" class="headerlink" title="4.限制总资源数"></a>4.限制总资源数</h4><p>如果有的资源为稀缺资源（数据库的连接，线程），并且多个请求可能同时去使用，那么需要去限制应用</p>
+<p>常见场景：数据库连接池，线程池等等池化技术</p>
+<p>比如给这个应用分配的连接数为100，那么本应用最多可以使用100个资源，超出的进入等待或者直接抛出异常</p>
+<h4 id="5-限制某个接口的总并发"><a href="#5-限制某个接口的总并发" class="headerlink" title="5.限制某个接口的总并发"></a>5.限制某个接口的总并发</h4><p>如果接口可能会有突发访问的情况，但又担心访问量太大造成服务崩溃，如抢购业务，这个时候就可以通过限制接口的总并发请求量，来解决问题</p>
+<p>常见场景：因为是细粒度的操作，所以可以为每一个接口设置阈值，可以使用java的AtomicLong进行限流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```java</span><br><span class="line"></span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">`<span class="keyword">try</span>&#123;`</span><br><span class="line"></span><br><span class="line">`<span class="keyword">if</span>（atomic.incrementAndGet&gt;阈值）&#123;`</span><br><span class="line"></span><br><span class="line">`拒绝请求；`</span><br><span class="line"></span><br><span class="line">`&#125;`</span><br><span class="line"></span><br><span class="line">`处理请求；`</span><br><span class="line"></span><br><span class="line">`&#125;<span class="keyword">finally</span>&#123;`</span><br><span class="line"></span><br><span class="line">`Atomic.decrementAndGet（）；`</span><br><span class="line"></span><br><span class="line">`&#125;`</span><br></pre></td></tr></table></figure>
+<h4 id="6-Nginx进行限流"><a href="#6-Nginx进行限流" class="headerlink" title="6.Nginx进行限流"></a>6.Nginx进行限流</h4><p>Nginx的负载均衡，Nginx提供了ngx_http_limit_req_module模块进行流量控制</p>
+<h4 id="7-使用消息队列"><a href="#7-使用消息队列" class="headerlink" title="7.使用消息队列"></a>7.使用消息队列</h4><p>通过消息队列，把每一个请求放入队列，通过人为设置控制来进行限流</p>
+<p>常见的消息队列：rabbitMQ，activeMQ，RocketMQ，kafka等…</p>
+<h4 id="8-使用Netfix的Hystrix来进行限流"><a href="#8-使用Netfix的Hystrix来进行限流" class="headerlink" title="8.使用Netfix的Hystrix来进行限流"></a>8.使用Netfix的Hystrix来进行限流</h4><p>Netflix Hystrix是SOA/微服务架构中提供服务隔离、熔断、降级机制的工具/框架。Netflix Hystrix是断路器的一种实现，用于高微服务架构的可用性，是防止服务出现雪崩的利器。</p>
+<p><img src="/2019/04/01/企业级限流的几种技术/NetFlixHystrix.png" alt="img"></p>
+<h4 id="9-使用Guava来进行限流"><a href="#9-使用Guava来进行限流" class="headerlink" title="9.使用Guava来进行限流"></a>9.使用Guava来进行限流</h4><p>Guava是一个由Google开发的一个基于Java类库集合的拓展项目，包括collections，caching，primitives support，cocurrency libraries，common annotations，string processing，I/O等等，这些高质量的API可以使你的java代码更简洁，更加优雅，让你的工作轻松愉悦</p>
+<p>通过限流算法：漏桶算法或令牌桶算法</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/限流/" rel="tag"># 限流</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/31/这几天/" rel="next" title="这几天">
+                <i class="fa fa-chevron-left"></i> 这几天
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +474,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -350,8 +498,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -429,6 +586,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#限流的概念"><span class="nav-number">1.</span> <span class="nav-text">限流的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#企业级限流的几种技术"><span class="nav-number">2.</span> <span class="nav-text">企业级限流的几种技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-手动实现负载均衡"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.手动实现负载均衡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-验证码限流"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.验证码限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-容器限流"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.容器限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-限制总资源数"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.限制总资源数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-限制某个接口的总并发"><span class="nav-number">2.0.5.</span> <span class="nav-text">5.限制某个接口的总并发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Nginx进行限流"><span class="nav-number">2.0.6.</span> <span class="nav-text">6.Nginx进行限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-使用消息队列"><span class="nav-number">2.0.7.</span> <span class="nav-text">7.使用消息队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-使用Netfix的Hystrix来进行限流"><span class="nav-number">2.0.8.</span> <span class="nav-text">8.使用Netfix的Hystrix来进行限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-使用Guava来进行限流"><span class="nav-number">2.0.9.</span> <span class="nav-text">9.使用Guava来进行限流</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -565,6 +738,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
