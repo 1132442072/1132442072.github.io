@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="面试,">
+  <meta name="keywords" content="Java面试题,HashMap,Hashtable,ConcurrentHashMap,">
 
 
 
@@ -86,18 +86,22 @@
 
 
 
-<meta name="description" content="听说BAT面试就考这些？有一段时间没来这里了，今天开一个新坑，面试系列来了，这是一个边学习边记录的系列，在各家互联网大厂招人越来越严谨，注重技术基础的情形下，整理一些面试常考注重的问题及解答 所有的问题及回答都是技术方面的，这里不涉及一些非技术性及HR面的问题 主要分为以下几个方面 java面试题 算法面试题 计算机网络与操作系统面试题 数据库面试题 互联网开发面试题  注意文章涉及面试问题均为个">
-<meta name="keywords" content="面试">
+<meta name="description" content="java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap最近正好在看这方面的内容，所以就把这个就当作系列开篇的第一个吧，这也是面试常考的数据结构 经典问题如下：  简单介绍一下HashMap HashMap与Hashtable的区别 HashMap在jdk7和jdk8中的区别 HashMap与ConcurrentHashMap的区别  不管是笔试还是面试，只要">
+<meta name="keywords" content="Java面试题,HashMap,Hashtable,ConcurrentHashMap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="听说BAT面试就考这些？(开篇)">
-<meta property="og:url" content="http://yoursite.com/2019/04/01/听说BAT面试就考这些？(开篇)/index.html">
+<meta property="og:title" content="听说BAT面试就考这些？(1.1)">
+<meta property="og:url" content="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="听说BAT面试就考这些？有一段时间没来这里了，今天开一个新坑，面试系列来了，这是一个边学习边记录的系列，在各家互联网大厂招人越来越严谨，注重技术基础的情形下，整理一些面试常考注重的问题及解答 所有的问题及回答都是技术方面的，这里不涉及一些非技术性及HR面的问题 主要分为以下几个方面 java面试题 算法面试题 计算机网络与操作系统面试题 数据库面试题 互联网开发面试题  注意文章涉及面试问题均为个">
+<meta property="og:description" content="java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap最近正好在看这方面的内容，所以就把这个就当作系列开篇的第一个吧，这也是面试常考的数据结构 经典问题如下：  简单介绍一下HashMap HashMap与Hashtable的区别 HashMap在jdk7和jdk8中的区别 HashMap与ConcurrentHashMap的区别  不管是笔试还是面试，只要">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-24T13:10:56.741Z">
+<meta property="og:image" content="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/HashMap结构.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/hash容量1.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/hash容量2.png">
+<meta property="og:updated_time" content="2019-06-03T11:44:12.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="听说BAT面试就考这些？(开篇)">
-<meta name="twitter:description" content="听说BAT面试就考这些？有一段时间没来这里了，今天开一个新坑，面试系列来了，这是一个边学习边记录的系列，在各家互联网大厂招人越来越严谨，注重技术基础的情形下，整理一些面试常考注重的问题及解答 所有的问题及回答都是技术方面的，这里不涉及一些非技术性及HR面的问题 主要分为以下几个方面 java面试题 算法面试题 计算机网络与操作系统面试题 数据库面试题 互联网开发面试题  注意文章涉及面试问题均为个">
+<meta name="twitter:title" content="听说BAT面试就考这些？(1.1)">
+<meta name="twitter:description" content="java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap最近正好在看这方面的内容，所以就把这个就当作系列开篇的第一个吧，这也是面试常考的数据结构 经典问题如下：  简单介绍一下HashMap HashMap与Hashtable的区别 HashMap在jdk7和jdk8中的区别 HashMap与ConcurrentHashMap的区别  不管是笔试还是面试，只要">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/HashMap结构.png">
 
 
 
@@ -127,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/01/听说BAT面试就考这些？(开篇)/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/">
 
 
 
 
 
-  <title>听说BAT面试就考这些？(开篇) | 个人博客</title>
+  <title>听说BAT面试就考这些？(1.1) | 个人博客</title>
   
 
 
@@ -168,7 +172,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">”技术改变生活“</p>
+        <p class="site-subtitle">”不忘初心，努力前行“</p>
       
   </div>
 
@@ -292,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/听说BAT面试就考这些？(开篇)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/24/听说BAT面试就考这些？-1-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DZX">
@@ -309,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">听说BAT面试就考这些？(开篇)</h1>
+          <h1 class="post-title" itemprop="name headline">听说BAT面试就考这些？(1.1)</h1>
         
 
         <div class="post-meta">
@@ -321,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-01T01:39:53+08:00">
-                2019-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-24T21:27:41+08:00">
+                2019-05-24
               </time>
             
 
@@ -381,18 +385,84 @@
       
 
       
-        <h1 id="听说BAT面试就考这些？"><a href="#听说BAT面试就考这些？" class="headerlink" title="听说BAT面试就考这些？"></a>听说BAT面试就考这些？</h1><p>有一段时间没来这里了，今天开一个新坑，面试系列来了，这是一个边学习边记录的系列，在各家互联网大厂招人越来越严谨，注重技术基础的情形下，整理一些面试常考注重的问题及解答</p>
-<p>所有的问题及回答都是技术方面的，这里不涉及一些非技术性及HR面的问题</p>
-<h3 id="主要分为以下几个方面"><a href="#主要分为以下几个方面" class="headerlink" title="主要分为以下几个方面"></a>主要分为以下几个方面</h3><ol>
-<li>java面试题</li>
-<li>算法面试题</li>
-<li>计算机网络与操作系统面试题</li>
-<li>数据库面试题</li>
-<li>互联网开发面试题</li>
+        <h2 id="java面试题（1-1）HashMap，Hashtable，ConcurrentHashMap"><a href="#java面试题（1-1）HashMap，Hashtable，ConcurrentHashMap" class="headerlink" title="java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap"></a>java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap</h2><p>最近正好在看这方面的内容，所以就把这个就当作系列开篇的第一个吧，这也是面试常考的数据结构</p>
+<p>经典问题如下：</p>
+<ol>
+<li><strong>简单介绍一下HashMap</strong></li>
+<li><strong>HashMap与Hashtable的区别</strong></li>
+<li><strong>HashMap在jdk7和jdk8中的区别</strong></li>
+<li><strong>HashMap与ConcurrentHashMap的区别</strong></li>
 </ol>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>文章涉及面试问题均为个人网上搜寻整理的一线互联网公司常见的面试题，偏向于校招的应届生</p>
-<p>所有的面试问题解答均为个人学习过程中的总结，如想一起交流或者对文章进行指错可以点击左侧的联系方式与我交流联系，非常欢迎也很希望能和人一起进步和学习</p>
-
+<p>不管是笔试还是面试，只要面java相关的工作基本上大概率都会问这些问题，所以很重要，接下来就针对这几个问题来看一下这些数据结构设计的原理和源码。</p>
+<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="HashMap的介绍"><a href="#HashMap的介绍" class="headerlink" title="HashMap的介绍"></a>HashMap的介绍</h4><hr>
+<p><strong>父类</strong>：AbstractMap</p>
+<p><strong>类型参数</strong>：HashMap&lt;K,V&gt;</p>
+<p>​                    K - 此映射所维护的键的类型</p>
+<p>​                    V - 所映射键值的类型                        </p>
+<p><strong>已实现接口</strong>：Serializable，Cloneable，Map&lt;K,V&gt;</p>
+<p><strong>直接子类</strong>：LinkedHashMap, PrinterStateReasons</p>
+<hr>
+<a id="more"></a>
+<h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a><strong>构造函数</strong></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = DEFAULT_LOAD_FACTOR;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(<span class="keyword">int</span> initialCapacity)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(initialCapacity, DEFAULT_LOAD_FACTOR);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(<span class="keyword">int</span> initialCapacity, <span class="keyword">float</span> loadFactor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (initialCapacity &lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Illegal initial capacity: "</span> +</span><br><span class="line">                                               initialCapacity);</span><br><span class="line">        <span class="keyword">if</span> (initialCapacity &gt; MAXIMUM_CAPACITY)</span><br><span class="line">            initialCapacity = MAXIMUM_CAPACITY;</span><br><span class="line">        <span class="keyword">if</span> (loadFactor &lt;= <span class="number">0</span> || Float.isNaN(loadFactor))</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Illegal load factor: "</span> +</span><br><span class="line">                                               loadFactor);</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = loadFactor;</span><br><span class="line">        <span class="keyword">this</span>.threshold = tableSizeFor(initialCapacity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">HashMap</span><span class="params">(Map&lt;? extends K, ? extends V&gt; m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.loadFactor = DEFAULT_LOAD_FACTOR;</span><br><span class="line">        putMapEntries(m, <span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看初始化的源码，初始化的过程中其中有一些常量，让我们把它找出来</p>
+<p>DEFAULT_LOAD_FACTOR（默认加载因子）</p>
+<p>MAXIMUM_CAPACITY（最大容量）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* The load factor used when none specified in constructor.</span></span><br><span class="line"><span class="comment">* 如果没在构造器中定义加载因子，那么这个就为默认</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">float</span> DEFAULT_LOAD_FACTOR = <span class="number">0.75f</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* The maximum capacity, used if a higher value is implicitly specified</span></span><br><span class="line"><span class="comment">* by either of the constructors with arguments.</span></span><br><span class="line"><span class="comment">* MUST be a power of two &lt;= 1&lt;&lt;30.</span></span><br><span class="line"><span class="comment">* 容量的极限值，如果初始化时的容量高于此值，那么强制容量为此值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAXIMUM_CAPACITY = <span class="number">1</span> &lt;&lt; <span class="number">30</span>;</span><br></pre></td></tr></table></figure>
+<p><em>附加部分</em></p>
+<p><em>&lt;&lt; 此符号为java的左移运算符</em> </p>
+<p><em>1 &lt;&lt; x   等同于   2 ^ x 所以这里HashMap的最大容量为 2 ^ 30</em> </p>
+<p>其中我们可以看到构造器中是可以自定义初始化的容量大小的，但是在默认的无参构造器中并没有定义初始容量，</p>
+<p>只定义了默认的加载因子，那么在我使用无参构造的函数时初始的容量为多少呢？我们来看源码发现有这样一个常</p>
+<p>量</p>
+<p>DEFAULT_INITIAL_CAPACITY（默认初始容量）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* The default initial capacity - MUST be a power of two.</span></span><br><span class="line"><span class="comment">* 默认的初始容量 — 此值必须是2的幂</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_INITIAL_CAPACITY = <span class="number">1</span> &lt;&lt; <span class="number">4</span>; <span class="comment">// aka 16</span></span><br></pre></td></tr></table></figure>
+<p>默认的初始容量为16，我们看到这里的源码注释中有一个条件，容量的值必须为2的幂</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">tableSizeFor</span><span class="params">(<span class="keyword">int</span> cap)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = cap - <span class="number">1</span>;</span><br><span class="line">        n |= n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">        n |= n &gt;&gt;&gt; <span class="number">2</span>;</span><br><span class="line">        n |= n &gt;&gt;&gt; <span class="number">4</span>;</span><br><span class="line">        n |= n &gt;&gt;&gt; <span class="number">8</span>;</span><br><span class="line">        n |= n &gt;&gt;&gt; <span class="number">16</span>;</span><br><span class="line">        <span class="keyword">return</span> (n &lt; <span class="number">0</span>) ? <span class="number">1</span> : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在自定义的初始容量这里我们看有个方法也做了相应的处理，保证容量为2的次幂。</p>
+<p>为什么容量必须是2的次幂呢？？这就涉及了接下来的问题，HashMap的结构</p>
+<hr>
+<h5 id="HashMap的结构"><a href="#HashMap的结构" class="headerlink" title="HashMap的结构"></a><strong>HashMap的结构</strong></h5><p>HashMap的底层结构实现是由数组加链表结构实现的，也就是数组的每一个元素内为一个完整的链表结构，数组</p>
+<p>元素中存储的是链表的头</p>
+<p><img src="/2019/05/24/听说BAT面试就考这些？-1-1/HashMap结构.png" alt></p>
+<p>当存入元素时会对存入的Key值进行Hash找出它在数组中所对应的位置，如果要对Key值进行Hash的话就会难免</p>
+<p>有冲突，也就是不同的Key在进行Hash时Hash值相同的时候，当这种情况出现时，底层就会拿着这个Key的Value</p>
+<p>去和相同Hash链表里的元素值进行equal操作，如果发现值相等就会替换掉当前存储的值，如果链表中没有相等值</p>
+<p>的话那么就会对这个链表进行扩容，也就是将这个新元素插入进去。</p>
+<h6 id="为什么HashMap的容量必须为2的次幂呢？"><a href="#为什么HashMap的容量必须为2的次幂呢？" class="headerlink" title="为什么HashMap的容量必须为2的次幂呢？"></a><strong>为什么HashMap的容量必须为2的次幂呢？</strong></h6><p>在源码的putVal方法中，我们可以看到底层是这样计算Key应该存放在数组的什么位置的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//容量值-1在与上hash值</span></span><br><span class="line">tab[(n - <span class="number">1</span>) &amp; hash]</span><br></pre></td></tr></table></figure>
+<p>所以让我们来举个例子，容量为2的次幂时和相反时的区别</p>
+<p>假设HashMap的容量为16，转化成二进制为10000，n-1得出的二进制为1111 </p>
+<p>哈希值为1111和1110的话 ，按照上面的公式</p>
+<p><img src="/2019/05/24/听说BAT面试就考这些？-1-1/hash容量1.png" alt></p>
+<p>可以算出1111索引为15，1110索引为14</p>
+<hr>
+<p>那么假设HashMap的容量为15的话，此时不是2的次幂，转化二进制为01111，n-1得出的二进制为1110</p>
+<p>哈希值为1111和1110的话，按照上面的公式</p>
+<p><img src="/2019/05/24/听说BAT面试就考这些？-1-1/hash容量2.png" alt></p>
+<p>可以算出1111索引为14，1110索引也为14，<strong>产生了hash冲突</strong>，就代表会浪费内存空间，链表就会变长，增加查询的时间，减慢效率</p>
+<p>所以为什么HashMap的容量设计必须为2的次幂呢</p>
+<p><strong>1.减少Hash冲突的几率</strong></p>
+<p><strong>2.(n - 1) &amp; hash，当n为2次幂时，会满足(n - 1) &amp; hash = hash % n</strong></p>
+<h6 id="HashMap的扩容"><a href="#HashMap的扩容" class="headerlink" title="HashMap的扩容"></a>HashMap的扩容</h6><p><strong>为什么要进行扩容呢？</strong></p>
+<p>因为当存入的K-V值越来越多时，难免会产生大量的Hash冲突，这会导致数组后的链表越来越长，导致查询效率大</p>
+<p>量降低最大为o(N)，所以为了避免这种情况产生，当存入的元素大于一定的条件时，整个数据结构需要进行扩容。</p>
+<p><strong>HashMap的扩容的时机</strong></p>
+<p>说到时机就不得不说两个参数，<strong>容量</strong>和<strong>扩容因子</strong></p>
+<p>而且一定是存放元素时元素个数满足条件时产生扩容时机，所以来看一下put过程的源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">put</span><span class="params">(K key, V value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (key == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> putForNullKey(value);</span><br><span class="line">        <span class="keyword">int</span> hash = hash(key);</span><br><span class="line">        <span class="keyword">int</span> i = indexFor(hash, table.length);</span><br><span class="line">        <span class="keyword">for</span> (Entry&lt;K,V&gt; e = table[i]; e != <span class="keyword">null</span>; e = e.next) &#123;</span><br><span class="line">            Object k;</span><br><span class="line">            <span class="keyword">if</span> (e.hash == hash &amp;&amp; ((k = e.key) == key || key.equals(k))) &#123;</span><br><span class="line">                V oldValue = e.value;</span><br><span class="line">                e.value = value;</span><br><span class="line">                e.recordAccess(<span class="keyword">this</span>);</span><br><span class="line">                <span class="keyword">return</span> oldValue;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        modCount++;</span><br><span class="line">        addEntry(hash, key, value, i);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1.先判断存入的key值是否为null，如果为null直接存入以null为key的值</p>
+<p>2.计算存入key的hash值</p>
+<hr>
+<p>HashMap是一个散列表，存储的内容为键值对类型（k-v）</p>
+<p>默认容量大小为16，默认加载因子为0.75，最大容量为2^30</p>
+<p><strong>允许键和键值为null，不保证映射的顺序</strong>，特别是它不保证该顺序恒久不变。</p>
+<p>HashMap的实现不是同步的，使用时会产生线程安全问题，<strong>非线程安全的映射</strong></p>
+<h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><hr>
+<p>HashTable中不允许键值保存为null</p>
+<p>默认容量大小为11，默认加载因子为0.75，最大容量为2^30</p>
+<p>HashTable是同步的，所有的读写等操作都进行了Synchronized锁保护，当有读写操作时锁住整个结构，所以此数据结构是线程安全的映射。但是锁保护的代价也相当巨大，会对读写的效率产生较大影响。</p>
+<p>HashMap的迭代器（<code>Iterator</code>）是快速失败的迭代器，但是Hashtable的迭代器（<code>enumerator</code>）不是快速失败的。如果有其它线程对HashMap进行的添加/删除元素，将会抛出<code>ConcurrentModificationException</code>（并发修改异常），所以需要使用迭代器本身的<code>remove</code>方法。</p>
+<h3 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h3>
       
     </div>
     
@@ -409,7 +479,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/面试/" rel="tag"># 面试</a>
+            <a href="/tags/Java面试题/" rel="tag"># Java面试题</a>
+          
+            <a href="/tags/HashMap/" rel="tag"># HashMap</a>
+          
+            <a href="/tags/Hashtable/" rel="tag"># Hashtable</a>
+          
+            <a href="/tags/ConcurrentHashMap/" rel="tag"># ConcurrentHashMap</a>
           
         </div>
       
@@ -422,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/31/这几天/" rel="next" title="这几天">
-                <i class="fa fa-chevron-left"></i> 这几天
+              <a href="/2019/05/23/听说BAT面试就考这些？(开篇)/" rel="next" title="听说BAT面试就考这些？(开篇)">
+                <i class="fa fa-chevron-left"></i> 听说BAT面试就考这些？(开篇)
               </a>
             
           </div>
@@ -431,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/01/企业级限流的几种技术/" rel="prev" title="企业级限流的几种技术">
-                企业级限流的几种技术 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -513,7 +585,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -535,7 +607,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -584,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#听说BAT面试就考这些？"><span class="nav-number">1.</span> <span class="nav-text">听说BAT面试就考这些？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要分为以下几个方面"><span class="nav-number">1.0.1.</span> <span class="nav-text">主要分为以下几个方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.0.2.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java面试题（1-1）HashMap，Hashtable，ConcurrentHashMap"><span class="nav-number">1.</span> <span class="nav-text">java面试题（1.1）HashMap，Hashtable，ConcurrentHashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-number">1.1.</span> <span class="nav-text">HashMap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HashMap的介绍"><span class="nav-number">1.1.1.</span> <span class="nav-text">HashMap的介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HashMap的结构"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">HashMap的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#为什么HashMap的容量必须为2的次幂呢？"><span class="nav-number">1.1.1.2.1.</span> <span class="nav-text">为什么HashMap的容量必须为2的次幂呢？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HashMap的扩容"><span class="nav-number">1.1.1.2.2.</span> <span class="nav-text">HashMap的扩容</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-number">1.2.</span> <span class="nav-text">Hashtable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ConcurrentHashMap"><span class="nav-number">1.3.</span> <span class="nav-text">ConcurrentHashMap</span></a></li></ol></li></ol></div>
             
 
           </div>
